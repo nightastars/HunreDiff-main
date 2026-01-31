@@ -1,0 +1,43 @@
+data:
+    dataset: "CT"
+    augment: False
+    image_size: 512
+    channels: 1
+    num_workers: 16
+    data_dir: "/data/wangjiping/Diffusion-model/hun-data/stage1-new/img/"
+    conditional: True
+
+vitinr:
+    inp_channels: 1
+    out_channels: 1
+    inner_channel: 32
+    embed_dim: 32
+    patch_size: [3, 4]
+    num_blocks: [1, 2, 2, 2]
+    heads: [1, 2, 4, 8]
+    ffn_expansion_factor: 2.66
+    bias: False
+    LayerNorm_type: 'WithBias'
+    global_residual: False
+    noise_level_channel: 32
+    norm_groups: 32
+    dropout: 0.0
+    pre_channel: 32
+
+training:
+    batch_size: 2
+    n_epochs: 100
+    # n_iters: 2000000
+    snapshot_freq: 42502
+    validation_freq: 42502
+
+sampling:
+    batch_size: 1
+    last_only: True
+
+optim:
+    weight_decay: 0.000
+    optimizer: "AdamW"
+    lr: 0.00002
+    amsgrad: False
+    eps: 0.00000001
