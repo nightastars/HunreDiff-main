@@ -15,7 +15,7 @@ import time
 
 
 def parse_args_and_config():
-    parser = argparse.ArgumentParser(description='Training Foundation Model InDI')
+    parser = argparse.ArgumentParser(description='Training Hybrid-domain Collaborative Universal Recursive Diffusion Model for Non-ideal Measurement CT Reconstruction under Extreme Degradation Conditions')
     parser.add_argument("--config", default='CT.yml', type=str,
                         help="Path to the config file")
     parser.add_argument("--save_path", default='./save1-sino-stage1/', type=str,

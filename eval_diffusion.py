@@ -16,7 +16,7 @@ from models import DenoisingDiffusion, DiffusiveRestoration
 
 
 def parse_args_and_config():
-    parser = argparse.ArgumentParser(description='Restoring Weather with Patch-Based Denoising Diffusion Models')
+    parser = argparse.ArgumentParser(description='Testing Hybrid-domain Collaborative Universal Recursive Diffusion Model for Non-ideal Measurement CT Reconstruction under Extreme Degradation Conditions')
     parser.add_argument("--config", default='CT.yml', type=str,
                         help="Path to the config file")
     parser.add_argument('--resume', default='./save1-sino-stage2/ckpts/CT_69_ddpm.pth.tar', type=str,
